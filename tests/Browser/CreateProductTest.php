@@ -29,7 +29,8 @@ class CreateProductTest extends DuskTestCase
                 ->type('[name=brand]', $brand)
                 ->type('[name=product_type]', $type)
                 ->press('CREATE')
-                ->assertPathBeginsWith('/products/');
+                ->assertPathBeginsWith('/products/')
+                ->pause(3000);
 
             $this->assertDatabaseHas('products', [
                 'admin_id' => $this->user()->id,

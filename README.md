@@ -9,6 +9,7 @@ After installing the environmental dependencies, perform the following after clo
 -   `composer install`
 -   `npm install && npm run dev`
 -   `cp .env.example .env`
+-   `php artisan key:generate`
 
 Configure the `.env` file to a local database where you can run the projects migrations.
 
